@@ -6,6 +6,9 @@ import Corruption2017 from "./components/Corruption2017";
 import Corruption2016 from "./components/Corruption2016";
 import Corruption2015 from "./components/Corruption2015";
 import Difference1516 from "./components/Difference1516";
+import Difference1617 from "./components/Difference1617";
+import Difference1718 from "./components/Difference1718";
+import Difference1819 from "./components/Difference1819";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet'
@@ -19,11 +22,20 @@ function App() {
       <Navbar />
       <div className="container mt-2" style={{ marginTop: 40 }}>
         <Switch>
+        <Route path="/Difference1819">
+            <Difference1819 />
+          </Route>
           <Route exact path="/">
             <Corruption2019 />
           </Route>
           <Route path="/Corruption2018">
             <Corruption2018 />
+          </Route>
+          <Route path="/Difference1718">
+            <Difference1718 />
+          </Route>
+          <Route path="/Difference1617">
+            <Difference1617 />
           </Route>
           <Route path="/Corruption2017">
             <Corruption2017 />
