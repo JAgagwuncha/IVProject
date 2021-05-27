@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className={`navbar-menu ${isOpen && "is-active"}`}>
           <div className="navbar-start">
             <NavLink className="navbar-item" activeClassName="is-active" to="/">
-              Home
+              2019
             </NavLink>
 
             <NavLink
@@ -36,6 +36,30 @@ const Navbar = () => {
               to="/Corruption2018"
             >
               2018
+            </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/Corruption2017"
+            >
+              2017
+            </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/Corruption2016"
+            >
+              2016
+            </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/Corruption2015"
+            >
+              2015
             </NavLink>
           </div>
 

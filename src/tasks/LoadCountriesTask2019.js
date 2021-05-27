@@ -1,11 +1,11 @@
 import papa from "papaparse";
 import legendItems from "../entities/LegendItems";
 import { features } from "../data/countries.json";
-import IVDataset from "../data/IVDataset.csv"
+import IVFinalDataSet from "../data/IVFinalDataSet.csv"
 //    this.setState(features);
 
 class LoadCountryTask {
-  covidUrl = IVDataset;
+  covidUrl = IVFinalDataSet;
 
   setState = null;
 

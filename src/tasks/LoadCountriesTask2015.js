@@ -35,10 +35,10 @@ class LoadCountryTask {
       country.properties.CountryCode = 0;
 
       if (corruptionCountry != null) {
-        let rol = Number(corruptionCountry.ROL2018);
-        let coc = Number(corruptionCountry.COC2018)
-        let ge = Number(corruptionCountry.GE2018)
-        let ranking = Number(corruptionCountry.Rank2018)
+        let rol = Number(corruptionCountry.ROL2015);
+        let coc = Number(corruptionCountry.COC2015)
+        let ge = Number(corruptionCountry.GE2015)
+        let ranking = Number(corruptionCountry.Rank2015)
         country.properties.rol = rol;
         country.properties.coc = coc;
         country.properties.ge = ge;
