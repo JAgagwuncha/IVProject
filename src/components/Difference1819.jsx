@@ -25,7 +25,7 @@ const Difference1819 = () => {
         <Loading />
       ) : (
         <div>
-          <h1 style={{textAlign:"center"}}>Difference in Corruption Map 2017 - 2018</h1>
+          <h1 style={{textAlign:"center"}}>Difference in Corruption Map 2018 - 2019</h1>
           <Difference1819Map countries={countries} />
           <Legend legendItems={legendItemsReverse} />
         </div>
