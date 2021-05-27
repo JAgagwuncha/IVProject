@@ -9,7 +9,7 @@ class LoadCountryTask {
 
   setState = null;
 
-  load = (setState) => {
+  load = (setState) => { 
     this.setState = setState;
 
     papa.parse(this.dataPath, {
@@ -33,16 +33,19 @@ class LoadCountryTask {
       country.properties.ge = 0;
       country.properties.ranking = 0;
       country.properties.CountryCode = 0;
+      country.properties.difference = 0;
 
       if (corruptionCountry != null) {
-        let rol = Number(corruptionCountry.ROL2019);
-        let coc = Number(corruptionCountry.COC2019)
-        let ge = Number(corruptionCountry.GE2019)
-        let ranking = Number(corruptionCountry.Rank2019)
+        let rol = Number(corruptionCountry.ROL2015);
+        let coc = Number(corruptionCountry.COC2015);
+        let ge = Number(corruptionCountry.GE2015);
+        let ranking = Number(corruptionCountry.Rank2015);
+        let difference = Number(corruptionCountry.Diff1516);
         country.properties.rol = rol;
         country.properties.coc = coc;
         country.properties.ge = ge;
         country.properties.ranking = ranking;
+        country.properties.difference = difference;
       }
       this.#setCountryColor(country);
     }
@@ -52,7 +55,7 @@ class LoadCountryTask {
 
   #setCountryColor = (country) => {
     const legendItem = legendItems.find((item) =>
-      item.isFor(country.properties.ranking)
+      item.isFor(country.properties.difference)
     );
 
     if (legendItem != null) country.properties.color = legendItem.color;

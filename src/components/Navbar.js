@@ -61,6 +61,14 @@ const Navbar = () => {
             >
               2015
             </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/Difference1516"
+            >
+              2015-16
+            </NavLink>
           </div>
 
           <div className="navbar-end">

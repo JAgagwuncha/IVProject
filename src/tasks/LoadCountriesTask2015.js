@@ -5,21 +5,21 @@ import IVFinalDataSet from "../data/IVFinalDataSet.csv"
 //    this.setState(features);
 
 class LoadCountryTask {
-  covidUrl = IVFinalDataSet;
+  dataPath = IVFinalDataSet;
 
   setState = null;
 
   load = (setState) => { 
     this.setState = setState;
 
-    papa.parse(this.covidUrl, {
+    papa.parse(this.dataPath, {
       download: true,
       header: true,
-      complete: (result) => this.#processCovidData(result.data),
+      complete: (result) => this.#processIVData(result.data),
     });
   };
 
-  #processCovidData = (corruptionCountries) => {
+  #processIVData = (corruptionCountries) => {
     for (let i = 0; i < features.length; i++) {
       const country = features[i];
       console.log('here');
