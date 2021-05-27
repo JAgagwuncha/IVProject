@@ -8,7 +8,6 @@ import Corruption2015 from "./components/Corruption2015";
 import Difference1516 from "./components/Difference1516";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Component } from "react";
 import { Helmet } from 'react-helmet'
 
 const TITLE = 'Corruption Map'
@@ -29,14 +28,14 @@ function App() {
           <Route path="/Corruption2017">
             <Corruption2017 />
           </Route>
+          <Route path="/Difference1516">
+            <Difference1516 />
+          </Route>
           <Route path="/Corruption2016">
             <Corruption2016 />
           </Route>
           <Route path="/Corruption2015">
             <Corruption2015 />
-          </Route>
-          <Route path="/Difference1516">
-            <Difference1516 />
           </Route>
         </Switch>
         <Helmet>

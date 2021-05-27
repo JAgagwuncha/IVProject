@@ -1,5 +1,5 @@
 import papa from "papaparse";
-import legendItems from "../entities/LegendItems";
+import legendItems from "../entities/DifferenceLegendItems";
 import { features } from "../data/countries.json";
 import IVFinalDataSet from "../data/IVFinalDataSet.csv"
 //    this.setState(features);
@@ -34,6 +34,7 @@ class LoadCountryTask {
       country.properties.ranking = 0;
       country.properties.CountryCode = 0;
       country.properties.difference = 0;
+      country.properties.diffCode = 0;
 
       if (corruptionCountry != null) {
         let rol = Number(corruptionCountry.ROL2015);
@@ -41,11 +42,13 @@ class LoadCountryTask {
         let ge = Number(corruptionCountry.GE2015);
         let ranking = Number(corruptionCountry.Rank2015);
         let difference = Number(corruptionCountry.Diff1516);
+        let diffCode = Number(corruptionCountry.DiffCoded1516);
         country.properties.rol = rol;
         country.properties.coc = coc;
         country.properties.ge = ge;
         country.properties.ranking = ranking;
         country.properties.difference = difference;
+        country.properties.diffCode = diffCode;
       }
       this.#setCountryColor(country);
     }
@@ -55,7 +58,7 @@ class LoadCountryTask {
 
   #setCountryColor = (country) => {
     const legendItem = legendItems.find((item) =>
-      item.isFor(country.properties.difference)
+      item.isFor(country.properties.diffCode)
     );
 
     if (legendItem != null) country.properties.color = legendItem.color;

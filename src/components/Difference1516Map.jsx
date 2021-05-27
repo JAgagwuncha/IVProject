@@ -14,9 +14,6 @@ const Difference1516Map = ({ countries }) => {
     layer.options.fillColor = country.properties.color;
     const name = country.properties.ADMIN;
     const difference = country.properties.difference;
-    const rol = country.properties.rol;
-    const coc = country.properties.coc;
-    const ge = country.properties.ge;
     const ranking = country.properties.ranking;
     layer.bindPopup(
       `${name} - ${ranking.toFixed(2)}% <br />  Difference = ${difference.toFixed(2)}`

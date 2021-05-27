@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Difference1516Map from "./Difference1516Map";
 import LoadCountriesDifferenceTask1516 from "../tasks/LoadCountriesDifferenceTask1516";
-import DifferenceLegendItem from "../entities/DifferenceLegendItem"
 import legendItems from "../entities/DifferenceLegendItems"
 import Legend from "./Legend";
 
