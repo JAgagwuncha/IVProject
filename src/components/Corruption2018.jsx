@@ -25,7 +25,7 @@ const Corruption2018 = () => {
         <Loading />
       ) : (
         <div>
-          <h1 style={{textAlign:"center"}}>Corruption Map</h1>
+          <h1 style={{textAlign:"center"}}>Corruption Map 2018</h1>
           <CorruptionMap2018 countries={countries} />
           <Legend legendItems={legendItemsReverse} />
         </div>
