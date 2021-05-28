@@ -99,6 +99,14 @@ const Navbar = () => {
             >
               2015-16
             </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
+              to="/Info"
+            >
+              Info
+            </NavLink>
             
           </div>
 

@@ -9,6 +9,7 @@ import Difference1516 from "./components/Difference1516";
 import Difference1617 from "./components/Difference1617";
 import Difference1718 from "./components/Difference1718";
 import Difference1819 from "./components/Difference1819";
+import Info from "./components/Info";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet'
@@ -22,6 +23,9 @@ function App() {
       <Navbar />
       <div className="container mt-2" style={{ marginTop: 40 }}>
         <Switch>
+        <Route path="/Info">
+            <Info />
+          </Route>
         <Route path="/Difference1819">
             <Difference1819 />
           </Route>
